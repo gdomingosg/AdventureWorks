@@ -1,0 +1,55 @@
+version: 2
+
+sources:
+  - name: adventure_works
+    description: Sistema de banco transacional da Adventure Works.
+    database: FEA24_9
+    schema: raw_adventure_works
+    tables:
+      - name: salesorderdetail
+        description: Tabela com granularidade de produtos do pedido, apresentando seus respectivos valores, descontos e quantidade.
+
+      - name: salesorderheader
+        description: Tabela com informações gerais do pedido, apresentando informações de frete, valor total, etc.
+
+      - name: salesorderheadersalesreason
+        description: Tabela pivot indicando quais foram os motivos que levaram o consumidor a fazer o pedido com a AdventureWorks.
+
+      - name: salesreason
+        description: Tabela com a descrição dos motivos de que levaram o consumidor a fazer o pedido na AdventureWorks.
+      
+      - name: product
+        description: Tabela com informações dos produtos.
+
+      - name: productmodel
+        description: Tabela com informações dos modelos dos produtos.
+
+      - name: productcategory
+        description: Tabela com descrição das categorias dos produtos.
+      
+      - name: stateprovince
+        description: Tabela com o nome das provincias e estados.
+      
+      - name: countryregion
+        description: Tabela com o nome dos paises e regiões.
+      
+      - name: customer
+        description: Tabela de clientes.
+
+      - name: creditcard
+        description: Tabela com dados de cartões.
+
+      - name: personcreditcard
+        description: Tabela que faz a relação entre os cartões de créditos e os clientes.
+
+      - name: productsubcategory
+        description: Tabela de subcategoria de produtos.
+      
+      - name: address
+        description: Tabela de endereços 
+
+      - name: businessentityaddress
+        description: Tabela que faz relação entre o businessentity e o endereço.
+
+      - name: businessentity
+        description: Tabela com a relação de todos 
