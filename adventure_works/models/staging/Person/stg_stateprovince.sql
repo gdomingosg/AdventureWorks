@@ -7,7 +7,7 @@ with
 
     , renomeacao as (
         select
-            stateprovinceid as id_estado_provincia
+            stateprovinceid as pk_estado_provincia
             , stateprovincecode as codigo_estado_provincia
             , countryregioncode as codigo_pais_regiao
             , [name] as nome_estado_provincia

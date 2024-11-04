@@ -7,8 +7,8 @@ with
 
     , renomeacao as (
         select
-            businessentityid as id_ent_comercial
-            , creditcardid as id_cartao_credito
+            creditcardid as fk_cartao_credito
+            , businessentityid as fk_ent_comercial
             , cast(modifieddate as date) as data_alteracao
         from fonte
     )

@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_countryregion
+    description: Tabela com nome e código dos paises.
+    columns:
+      - name: pk_razao_venda
+        description: Chave primaria da razao de venda.
+
+      - name: nome_razao_venda
+        description: Descricao da razao da venda.
+
+      - name: tipo_razao_venda
+        description: Tipo da razao da venda.
+
+      - name: data_alteracao
+        description: Coluna com a data de alteracao dos registros.

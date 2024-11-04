@@ -7,31 +7,28 @@ with
 
     , renomeacao as (
         select
-            cast(salesorderid as int) as id_pedido
-            , cast(revisionnumber as int) as numero_revisao
+            cast(salesorderid as int) as pk_pedido
+            , cast(customerid as int) as fk_cliente
+            , cast(salespersonid as int) as fk_vendedor
+            , cast(territoryid as int) as fk_territorio
+            , cast(billtoaddressid as int) as fk_endereco_cobranca
+            , cast(shiptoaddressid as int) as fk_endereco_entrega
+            , cast(shipmethodid as int) as fk_tipo_entrega
+            , cast(creditcardid as int) as fk_cartao_credito
+            , cast(currencyrateid as int) as fk_taxa_moeda
             , cast(orderdate as date) as data_pedido
             , cast(duedate as date) as data_vencimento
             , cast(shipdate as date) as data_envio
             , cast([status] as varchar) as status
             , cast(onlineorderflag as boolean) as pedido_online
-            , purchaseordernumber as numero_ordem_compra
             , accountnumber as numero_conta
-            , cast(customerid as int) as id_cliente
-            , cast(salespersonid as int) as id_vendedor
-            , cast(territoryid as int) as id_territorio
-            , cast(billtoaddressid as ) as 
-            , cast(shiptoaddressid as ) as 
-            , cast(shipmethodid as ) as 
-            , cast(creditcardid as ) as 
-            , cast(creditcardapprovalcode as ) as 
-            , cast(currencyrateid as ) as 
-            , cast(subtotal as ) as 
-            , cast(taxamt as ) as 
-            , cast(freight as ) as 
-            , cast(totaldue as ) as 
-            , cast(comment as ) as 
-            , cast(rowguid as ) as 
-            , cast(modifieddate as ) as 
+            , cast(creditcardapprovalcode as varchar) as aprovacao_cartao_credito
+            , cast(subtotal as float) as valor_subtotal
+            , cast(taxamt as float) as valor_imposto
+            , cast(freight as float) as valor_frete
+            , cast(totaldue as float) as valor_total
+            , rowguid
+            , cast(modifieddate as date) as data_alteracao
         from fonte
     )
 

@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_stateprovince
+    description: Tabela com nome e codigo do estado ou provincia.
+    columns:
+      - name: pk_estado_provincia
+        description: Coluna com indentificar unico do estado ou provincia.
+
+      - name: codigo_estado_provincia
+        description: Coluna com o codigo do estado ou provincia.
+
+      - name: codigo_pais_regiao
+        description: Coluna com o codigo do pais ou regiao.
+
+      - name: nome_estado_provincia
+        description: Coluna com o nome do estado ou provincia.
+
+      - name: id_territorio
+        description: Coluna com o id do territorio.
+
+      - name: rowguid
+        description: Coluna com o identificador unico da linha da tabela.
+
+      - name: data_alteracao
+        description: Coluna com a data de alteracao do registro.

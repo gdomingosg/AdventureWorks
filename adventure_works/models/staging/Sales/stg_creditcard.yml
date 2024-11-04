@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_creditcard
+    description: Tabela com as informações de cartao de credito.
+    columns:
+      - name: pk_cartao_credito
+        description: Chave primaria do cartao de credito.
+
+      - name: tipo_cartao_credito
+        description: Indicador do tipo de cartao de credito.
+
+      - name: data_alteracao
+        description: Coluna com a data de alteracao dos registros.

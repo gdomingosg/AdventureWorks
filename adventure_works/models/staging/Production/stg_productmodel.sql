@@ -7,7 +7,7 @@ with
 
     , renomeacao as (
         select
-            productmodelid as id_modelo_produto
+            productmodelid as pk_modelo_produto
             , [name] as nome_modelo_produto
             , rowguid
             , cast(modifieddate as date) as data_alteracao

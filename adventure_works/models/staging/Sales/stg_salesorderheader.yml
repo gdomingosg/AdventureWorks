@@ -1,0 +1,71 @@
+version: 2
+
+models:
+  - name: stg_salesorderheader
+    description: Tabela com granularidade do pedido, com informações gerais a respeito da compra.
+    columns:
+      - name: pk_pedido
+        description: Chave primaria do pedido.
+
+      - name: fk_cliente
+        description: Chave estrangeira do cliente.
+
+      - name: fk_vendedor
+        description: Chave estrangeira do vendedor.
+
+      - name: fk_territorio
+        description: Chave estrangeira do territorio.
+
+      - name: fk_endereco_cobranca
+        description: Chave estrangeira do endereco de cobraca. Ligada com a chave primaria da tabela de enderecos.
+
+      - name: fk_endereco_entrega
+        description: Chave estrangeira do endereco de entrega. Ligada com a chave primaria da tabela de enderecos.
+
+      - name: fk_tipo_entrega
+        description: Chave estrangeira do tipo de entrega.
+
+      - name: fk_cartao_credito
+        description: Chave estrangeira do cartao de credito.
+
+      - name: fk_taxa_moeda
+        description: Chave estrangeira da taxa da moeda.
+
+      - name: data_pedido
+        description: Data do pedido.
+
+      - name: data_vencimento
+        description: Data de vencimento.
+
+      - name: data_envio
+        description: Data do envio.
+
+      - name: status
+        description: Status do pedido.
+
+      - name: pedido_online
+        description: Indicador se o pedido foi feito online.
+
+      - name: numero_conta
+        description: Numero da conta.
+
+      - name: aprovacao_cartao_credito
+        description: Codigo de aprovacao da compra feita por cartao de credito.
+
+      - name: valor_subtotal
+        description: Valor subtotal do pedido.
+
+      - name: valor_imposto
+        description: Valor do imposto sobre o pedido.
+
+      - name: valor_frete
+        description: Valor do frete do pedido.
+
+      - name: valor_total
+        description: Valor total do pedido, sendo a soma do valor_subtotal, valor_imposto e valor_frete.
+  
+      - name: rowguid
+        description: Coluna com o identificador unico da linha da tabela.
+
+      - name: data_alteracao
+        description: Coluna com a data de alteracao dos registros.

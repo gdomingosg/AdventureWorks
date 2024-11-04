@@ -7,7 +7,7 @@ with
 
     , renomeacao as (
         select
-            creditcardid as id_cartao_credito
+            creditcardid as pk_cartao_credito
             , cardtype as tipo_cartao_credito
             , cast(modifieddate as date) as data_alteracao
         from fonte

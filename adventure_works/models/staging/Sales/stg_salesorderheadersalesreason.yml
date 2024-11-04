@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_salesorderheadersalesreason
+    description: Tabela com que faz a referencia entre os pedidos e seus respectivos motivos.
+    columns:
+      - name: fk_pedido
+      description: Chave estrangeira do pedido.
+
+      - name: fk_razao_venda
+      description: Chave estrangeira da razao da venda.
+      
+      - name: data_alteracao
+        description: Coluna com a data de alteracao dos registros.

@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: stg_products
+    description: Tabela com as caracteristicas dos produtos.
+    columns:
+      - name: pk_produto
+        description: Coluna com o identificador unico do produto.
+
+        - name: fk_subcategoria
+        description: Chave estrangeira que indica a subcategoria do produto
+
+      - name: fk_modelo_produto
+        description: Chave estrangeira que indica a modelo do produto.
+
+      - name: nome_produto
+        description: Nome do produto.
+
+      - name: venda_permitida
+        description: Indica se o produto está ou não disponivel para a venda.
+
+      - name: preco_custo_produto
+        description: Indica o preço de custo do produto.
+
+      - name: preco_venda_produto
+        description: Indica o preço de venda do produto.
+
+      - name: tamanho_produto
+        description: Indica o tamanho do produto.
+
+      - name: unidade_medida_tamanho
+        description: Indica a unidade de medida do tamanho do produto.
+
+      - name: unidade_medida_peso
+        description: Indica a unidade de medida de peso do produto.
+
+      - name: peso_produto
+        description: Indica o peso do produto.
+
+      - name: linha_produto
+        description: Indica qual a linha do produto.
+
+      - name: classe_produto
+        description: Indica qual a classe do produto.
+
+      - name: estilo_produto
+        description: Indica o estiolo do produto.
+
+      - name: data_inicio_venda
+        description: Indica a data em que o produto começou a ser vendido.
+
+      - name: data_fim_venda
+        description: Indica a data em que o produto parou de ser vendido.
+
+      - name: data_descontinacao_venda
+        description: Indica a data em que o produto foi descontinuado.
+
+      - name: rowguid
+        description: Coluna com o identificador unico da linha da tabela.
+
+      - name: data_alteracao
+        description: Coluna com a data de alteracao dos registros.

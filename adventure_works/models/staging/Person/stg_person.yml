@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: stg_person
+    description: Tabela com informacao a respeito de todas as pessoas que fazem parte de algum processo da empresa.
+    columns:
+      - name: pk_pessoa
+        description: Chave primaria da pessoa.
+
+      - name: tipo_pessoa
+        description: Indica o tipo de operacao da qual a pessoa faz parte. Cliente, vendedor, empregado.
+
+      - name: nome_pessoa
+        description: Nome da pessoa.
+
+      - name: receber_promocao
+        description: Indica se a pessoa gostaria de receber promocao por email.
+
+      - name: rowguid
+        description: Coluna com o identificador unico da linha da tabela.
+
+      - name: data_alteracao
+        description: Coluna com a data de alteracao do registro.

@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: stg_salesorderdetail
+    description: Tabela com o detalhamentos do pedido por produto.
+    columns:
+      - name: pk_detalhe_pedido
+        description: Chave estrangeira do detalhe do pedido.
+
+      - name: fk_pedido
+        description: Chave primaria do pedido.
+      
+      - name: fk_produto
+        description: Chave estrangeira do produto.
+
+      - name: fk_oferta_especial
+        description: Chave estrangeira de detalhe pedido.
+
+      - name: numero_rastreamento_transportadora
+        description: Numero de rastreamento da transportadora.
+
+      - name: quantidade
+        description: Quantidade do pedido.
+
+      - name: preco_unitario
+        description: Preco unitário do produto.
+
+      - name: desconto
+        description: Desconto aplicado sobre o valor do item do pedido.
+        
+      - name: rowguid
+        description: Coluna com o identificador unico da linha da tabela.
+
+      - name: data_alteracao
+        description: Coluna com a data de alteracao dos registros.

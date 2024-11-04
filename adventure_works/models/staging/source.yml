@@ -53,3 +53,6 @@ sources:
 
       - name: businessentity
         description: Tabela com a relação de todos 
+      
+      - name: person
+        description: Tabela com todas as pessoas envolvidas nos processos da empresa.
