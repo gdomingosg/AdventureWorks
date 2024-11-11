@@ -8,10 +8,10 @@ with
     , renomeacao as (
         select
             stateprovinceid as pk_estado_provincia
-            , stateprovincecode as codigo_estado_provincia
-            , countryregioncode as codigo_pais_regiao
-            , [name] as nome_estado_provincia
-            , territoryid as id_territorio
+            , stateprovincecode as fk_estado_provincia
+            , countryregioncode as fk_pais_regiao
+            , name as nome_estado_provincia
+            , territoryid as fk_territorio
             , rowguid
             , cast(modifieddate as date) as data_alteracao
         from fonte

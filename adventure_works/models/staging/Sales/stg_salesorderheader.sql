@@ -19,7 +19,14 @@ with
             , cast(orderdate as date) as data_pedido
             , cast(duedate as date) as data_vencimento
             , cast(shipdate as date) as data_envio
-            , cast([status] as varchar) as status
+            , case
+                when status = 1 then 'In process'
+                when status = 2 then 'Approved'
+                when status = 3 then 'Backordered'
+                when status = 4 then 'Rejected'
+                when status = 5 then 'Shipped'
+                when status = 6 then 'Cancelled'
+            end as status_sales
             , cast(onlineorderflag as boolean) as pedido_online
             , accountnumber as numero_conta
             , cast(creditcardapprovalcode as varchar) as aprovacao_cartao_credito

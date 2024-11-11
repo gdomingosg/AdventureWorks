@@ -9,7 +9,7 @@ with
         select
             cast(productsubcategoryid as int) as pk_subcategoria_produto
             , cast(productcategoryid as int) as fk_categoria_produto
-            , cast([name] as varchar) as nome_subcategoria
+            , cast(name as varchar) as nome_subcategoria
             , rowguid
             , cast(modifieddate as date) as data_alteracao
         from fonte

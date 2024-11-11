@@ -7,9 +7,9 @@ with
 
     , renomeacao as (
         select
-            cast(salesreasonid as int) as pk_razao_venda
-            , cast(name as varchar) as nome_razao_venda
-            , cast(reasontype as varchar) as tipo_razao_venda
+            cast(salesreasonid as int) as pk_motivo_venda
+            , cast(name as varchar) as nome_motivo_venda
+            , cast(reasontype as varchar) as tipo_motivo_venda
             , cast(modifieddate as date) as data_alteracao
         from fonte
     )

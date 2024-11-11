@@ -8,7 +8,7 @@ with
     , renomeacao as (
         select
             productcategoryid as pk_categoria_produto
-            , [name] as nome_categoria_produto
+            , name as nome_categoria_produto
             , rowguid
             , cast(modifieddate as date) as data_alteracao
         from fonte

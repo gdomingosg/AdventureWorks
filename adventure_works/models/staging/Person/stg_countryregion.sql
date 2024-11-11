@@ -8,7 +8,7 @@ with
     , renomeacao as (
         select
             countryregioncode as pk_pais_regiao 
-            , [name] as nome_pais
+            , name as nome_pais
             , cast(modifieddate as date) as data_alteracao
         from fonte
     )

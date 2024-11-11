@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: dim_product
+    description: Tabela com informacoes dos produtos.
+    columns:
+      - name: pk_produto
+        description: Chave primaria do produto.
+        tests: 
+          - unique
+          - not_null
+      
+      - name: nome_produto
+        description: Nome do produto.
+            
+      - name: nome_categoria_produto
+        description: Nome da categoria do produto.
+            
+      - name: nome_subcategoria_produto
+        description: Nome da subcategoria do produto.
+            
+      - name: nome_modelo_produto
+        description: Nome do modelo do produto.
