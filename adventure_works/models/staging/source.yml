@@ -8,48 +8,151 @@ sources:
     tables:
       - name: salesorderdetail
         description: Tabela com granularidade de produtos do pedido, apresentando seus respectivos valores, descontos e quantidade.
+        columns:
+          - name: salesorderdetailid
+            description: Chave primaria do detalhe do pedido.
+            tests:
+              - not_null
+              - unique
+              
+          - name: salesorderid
+            description: Chave estrangeira do pedido.
+            tests:
+              - not_null       
 
       - name: salesorderheader
         description: Tabela com informações gerais do pedido, apresentando informações de frete, valor total, etc.
+        columns:
+          - name: salesorderid
+            description: Chave primaria do pedido.
+            tests:
+              - unique
+              - not_null
 
       - name: salesorderheadersalesreason
         description: Tabela pivot indicando quais foram os motivos que levaram o consumidor a fazer o pedido com a AdventureWorks.
+        columns:
+          - name: salesorderid
+            description: Chave primaria do pedido.
+            tests:
+              - not_null
 
       - name: salesreason
         description: Tabela com a descrição dos motivos de que levaram o consumidor a fazer o pedido na AdventureWorks.
+        columns:
+          - name: salesreasonid
+            description: Chave primaria da motivo do pedido.
+            tests:
+              - unique
+              - not_null 
+
+      - name: salesterritory
+        description: Tabela com informacoes de vendas por territorio e categorizacao de territorios.
+        columns:
+          - name: territoryid
+            description: Chave primaria ddo territorio.
+            tests:
+              - unique
+              - not_null 
       
       - name: product
         description: Tabela com informações dos produtos.
+        columns:
+          - name: productid
+            description: Chave primaria do produto.
+            tests:
+              - unique
+              - not_null
 
       - name: productmodel
         description: Tabela com informações dos modelos dos produtos.
 
       - name: productcategory
         description: Tabela com descrição das categorias dos produtos.
+        columns:
+          - name: productcategoryid
+            description: Chave primaria da categoria do produto.
+            tests:
+              - unique
+              - not_null
       
       - name: stateprovince
         description: Tabela com o nome das provincias e estados.
+        columns:
+          - name: stateprovinceid
+            description: Chave primaria do estado e provincia.
+            tests:
+              - unique
+              - not_null
       
       - name: countryregion
-        description: Tabela com o nome dos paises e regiões.
+        description: Tabela com o nome dos paises e regioes.
+        columns:
+          - name: countryregioncode
+            description: Codigo da regiao ou pais.
+            tests:
+              - unique
+              - not_null
       
       - name: customer
         description: Tabela de clientes.
+        columns:
+          - name: customerid
+            description: Chave primaria do cliente.
+            tests:
+              - unique
+              - not_null
 
       - name: creditcard
-        description: Tabela com dados de cartões.
+        description: Tabela com dados de cartoes.
+        columns:
+          - name: creditcardid
+            description: Chave primaria para os cartoes de credito.
+            tests:
+              - unique
+              - not_null
 
       - name: personcreditcard
         description: Tabela que faz a relação entre os cartões de créditos e os clientes.
 
       - name: productsubcategory
         description: Tabela de subcategoria de produtos.
+        columns:
+          - name: productsubcategoryid
+            description: Chave primaria para a subcategoria do produto.
+            tests:
+              - unique
+              - not_null
       
       - name: address
-        description: Tabela de endereços 
+        description: Tabela de endereços.
+        columns:
+          - name: addressid
+            description: Chave primaria para os enderecos.
+            tests:
+              - unique
+              - not_null
 
       - name: businessentityaddress
         description: Tabela que faz relação entre o businessentity e o endereço.
 
       - name: businessentity
         description: Tabela com a relação de todos 
+      
+      - name: person
+        description: Tabela com todas as pessoas envolvidas nos processos da empresa.
+        columns:
+          - name: businessentityid
+            description: Chave primaria para as pessoas/entidades do sistema.
+            tests:
+              - unique
+              - not_null
+
+      - name: store
+        description: Tabela com o nome das lojas que são clientes da adventure works.
+        columns: 
+          - name: businessentityid
+            description: Chave estrageira relacionada ao Customer.
+            test:
+              - unique
+              - not_null

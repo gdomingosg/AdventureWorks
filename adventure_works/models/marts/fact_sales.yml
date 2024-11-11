@@ -1,0 +1,85 @@
+models:
+  - name: fact_sales
+    description: Tabela com o detalhamento dos pedidos com granularidade de produtos.
+    columns:
+      - name: pk_detalhe_pedido
+        description: Chave primaria do detalhe pedido.
+        tests: 
+          - unique
+          - not_null
+
+      - name: fk_pedido
+        description: Chave estrangeira do pedido
+        tests: 
+          - not_null
+
+      - name: fk_produto
+        description: Chave estrangeira do produto.
+        tests: 
+          - not_null
+
+      - name: fk_cliente
+        description: Chave estrangeira do cliente.
+        tests: 
+          - not_null
+
+      - name: fk_endereco_cobranca
+        description: Chave estrangeira do endereco de cobranca.
+        tests: 
+          - not_null
+
+      - name: fk_endereco_entrega
+        description: Chave estrangeira do endereco de entrega.
+        tests: 
+          - not_null
+
+      - name: fk_cartao_credito
+        description: Chave estrangeira do cartao de credito.
+
+      - name: data_pedido
+        description: Data do pedido.
+
+      - name: data_vencimento
+        description: Data de vencimento.
+
+      - name: data_envio
+        description: Data de envio do pedido.
+
+      - name: quantidade
+        description: Quantida de prodto no pedido.
+
+      - name: preco_unitario
+        description: Preco unitario do produto.
+
+      - name: desconto
+        description: Desconto aplicado ao produto.
+
+      - name: faturamento_bruto
+        description: Faturamento bruto do produto.
+
+      - name: faturamento_liquido
+        description: Faturamento liquido do produto, faturamento bruto com o desconto aplicado.
+
+      - name: valor_imposto
+        description: Valor do imposto cobrado sobre o produto.
+
+      - name: valor_frete
+        description: Valor do frete cobrando pelo produto.
+
+      - name: valor_total_pedido
+        description: Soma do (faturamento_liquido + valor_imposto + valor_frete) de todos os itens do pedido.
+
+      - name: status_sales
+        description: Status do pedido 
+
+      - name: aprovacao_cartao_credito
+        description: Codigo de aprovacao do cartao de credito.
+
+      - name: valor_imposto_rateado
+        description: Valor do imposto do pedido dividido pela quantidade de produtos distintos que o pedido possui.
+
+      - name: valor_frete_rateado
+        description: Valor do frete do pedido dividido pela quantidade de produtos distintos que o pedido possui.
+
+      - name: valor_total_produto
+        description: Soma dos itens (faturamento_liquido + valor_imposto + valor_frete) para cada produto.

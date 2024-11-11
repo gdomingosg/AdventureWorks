@@ -7,10 +7,10 @@ with
 
     , renomeacao as (
         select
-            customerid as id_cliente
-            , personid as id_usuario
-            , storeid as id_loja
-            , territoryid as id_territorio
+            cast(customerid as int) as pk_cliente
+            , cast(personid as int) as fk_pessoa
+            , cast(storeid as int) as fk_loja
+            , cast(territoryid as int) as fk_territorio
             , rowguid
             , cast(modifieddate as date) as data_alteracao
         from fonte

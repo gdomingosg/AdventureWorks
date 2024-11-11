@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: dim_reason
+    description: Tabela com os motivos de compra de cada pedido.
+    columns:
+      - name: fk_pedido
+        description: Chave estrangeira do pedido.
+        tests: 
+          - unique
+          - not_null
+      
+      - name: nome_motivo_venda
+        description: Indica o motivo da venda.
+            
+      - name: tipo_motivo_venda
+        description: Indica a categoria do motivo da venda.
+            
+      - name: promotion
+        description: Indica se o produto estar em promocao foi um dos motivos da compra. 
+            
+      - name: other
+        description: Indica se outros foi um dos motivos da compra.
+
+      - name: marketing
+        description: Indica se marketing foi um dos motivos da compra.

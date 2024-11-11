@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: dim_date
+    description: Tabela calendario com toda as colunas necessarias para trabalhar com a variavel tempo.
+    columns:
+      - name: data_dia
+        description: Registro de data unico.
+        tests: 
+          - unique
+          - not_null
+      
+      - name: dia_da_semana
+        description: Numero do dia da semana.
+      
+      - name: mes
+        description: Numero do mes.
+
+      - name: dia_do_ano
+        description: Numero do dia do ano.
+
+      - name: ano
+        description: Ano
+
+      - name: nome_do_dia
+        description: Nome do dia da semana.
+
+      - name: nome_do_mes
+        description: Nome do mes.
+
+      - name: abrev_do_mes
+        description: Abreviacao do nome do mes.

@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: dim_customer
+    description: Tabela que faz o relacionamento entre os clientes, lojas e territorios.
+    columns:
+      - name: pk_cliente
+        description: Chave primaria do cliente.
+        tests: 
+          - unique
+          - not_null
+
+      - name: nome_cliente
+        description: Chave estrangeira do usuario.
+
+      - name: nome_loja
+        description: Chave estrangeira da loja.
+
+      - name: tipo_pessoa
+        description: Chave estrangeira do territorio.

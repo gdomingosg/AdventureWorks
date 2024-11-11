@@ -7,9 +7,9 @@ with
 
     , renomeacao as (
         select
-            productsubcategoryid as id_subcategoria_produto
-            , productcategoryid as id_categoria_produto
-            , [name] as nome_subcategoria
+            cast(productsubcategoryid as int) as pk_subcategoria_produto
+            , cast(productcategoryid as int) as fk_categoria_produto
+            , cast(name as varchar) as nome_subcategoria
             , rowguid
             , cast(modifieddate as date) as data_alteracao
         from fonte

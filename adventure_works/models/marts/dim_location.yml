@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: dim_location
+    description: Tabela com as localizacoes geograficas do endereco de cobranca e territorio.
+    columns:
+      - name: pk_endereco
+        description: Chave primaria do endereco.
+        tests: 
+          - unique
+          - not_null
+      
+      - name: nome_cidade
+        description: Nome da cidade.
+      
+      - name: nome_estado_provincia
+        description: Nome do estado ou provincia.
+      
+      - name: nome_pais
+        description: Nome do pais.
+      
+      - name: nome_territorio
+        description: Nome do territorio.
+      
+      - name: nome_grupo_territorio
+        description: Nome do grupo ao qual o territorio pertence.
