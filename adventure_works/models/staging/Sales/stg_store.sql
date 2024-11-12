@@ -7,7 +7,7 @@ with
 
     , renomeacao as (
         select
-            businessentityid as fk_customer
+            businessentityid as pk_loja
             , name as nome_loja
             , salespersonid as fk_vendedor
             , modifieddate as data_alteracao

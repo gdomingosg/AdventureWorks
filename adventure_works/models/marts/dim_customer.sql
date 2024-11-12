@@ -19,14 +19,13 @@ with
     , joined as (
         select
             stg_customer.pk_cliente
-            , stg_person.nome_pessoa as nome_cliente
-            , stg_store.nome_loja
-            , stg_person.tipo_pessoa
+            , coalesce(stg_store.nome_loja, stg_person.nome_pessoa) as nome_cliente
+            , stg_person.tipo_pessoa as tipo_cliente
         from stg_customer
         left join stg_person 
-            on stg_customer.pk_cliente = stg_person.pk_pessoa
+            on stg_customer.fk_pessoa = stg_person.pk_pessoa
         left join stg_store 
-            on stg_customer.fk_loja = stg_store.fk_customer
+            on stg_customer.fk_loja = stg_store.pk_loja
     )
 
 select *
