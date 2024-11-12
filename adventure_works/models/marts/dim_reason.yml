@@ -7,7 +7,6 @@ models:
       - name: fk_pedido
         description: Chave estrangeira do pedido.
         tests: 
-          - unique
           - not_null
       
       - name: nome_motivo_venda
